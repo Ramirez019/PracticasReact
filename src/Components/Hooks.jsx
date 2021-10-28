@@ -5,8 +5,13 @@ const Hooks = () => {
     const[contador,setContador] = useState(0);
     
     useEffect(() => {
-        let interval = setInterval(() => {setContador(contador+1)});
-    }, [])
+        let interval = setInterval(() => {setContador(contador+1)},1000);
+    
+        return()=> {
+            clearInterval(interval)
+        }
+
+    }, [contador])
 
     const Bottom ={
         width:'100%',
@@ -25,8 +30,8 @@ const Hooks = () => {
         <>
             <div style={Bottom}  className="container">
                 <button onClick={changeColor}>Cambia color</button>
+                <h1>Contador:{contador}</h1>
             </div>
-            
         </>
     )
 }

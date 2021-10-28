@@ -1,7 +1,12 @@
 import React, {Fragment} from 'react';
 import logo from './logo.svg';
 import './App.css';
-import Hooks from './Components/Hooks';
+// import IterateArray from './Components/IterateArray';
+// import SpreadOperator from './Components/SpreadOperator';
+// import ConditionalRendering from './Components/ConditionalRendering'
+// import Events from './Components/Events';
+// import Forms from './Components/Forms';
+// import Hooks from './Components/Hooks';
 // import LifeCycleComponent from './Components/LifeCycleComponent.jsx';
 // import { Refs } from './Components/Refs';
 // import StylesStyledComponent from './Components/StylesStyledComponent';
@@ -26,7 +31,12 @@ function App() {
     // </>
     
     <Fragment>
-      <Hooks/>
+      {/* <IterateArray/> */}
+      {/* <SpreadOperator/> */}
+      {/* <ConditionalRendering/> */}
+      {/* <Events/> */}
+      {/* <Forms/> */}
+      {/* <Hooks/> */}
       {/* <LifeCycleComponent/> */}
       {/* <Refs/> */}
       {/* <StylesStyledComponent/> */}

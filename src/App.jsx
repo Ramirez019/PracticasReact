@@ -1,6 +1,19 @@
-import React, {Fragment} from 'react';
+import React,{useState, Fragment} from 'react'
 import logo from './logo.svg';
 import './App.css';
+import {Provider} from 'react-redux'
+import store from './Redux/Store'
+import Contador from './Components/Contador.jsx';
+// import UserProvider from './Components/Context/userContext';
+// import ListUser from './Components/ListUser';
+// import { useCount } from './Components/Hooks/useCount';
+// import Father from './Components/Routes/Father';
+// import Axios from './Components/Axios';
+// import Fecth from './Components/Fecth';
+// import ComunicationComponent1 from './Components/ComunicationComponent1';
+// import ComunicationComponent2 from './Components/ComunicationComponent2';
+// import FatherComponent from './Components/IterateComponent/FatherComponent';
+// import IterateKeys from './Components/IterateKeys';
 // import IterateArray from './Components/IterateArray';
 // import SpreadOperator from './Components/SpreadOperator';
 // import ConditionalRendering from './Components/ConditionalRendering'
@@ -17,8 +30,26 @@ import './App.css';
 // import Props from './Components/Props';
 // import StateComponent from './Components/StateComponent';
 
-const list = ['pera ','manzana ', 'uvas']
+
+
 function App() {
+  // const[contador]=useCount(0)
+
+  // const list = ['pera ','manzana ', 'uvas']
+  // const [estado,setEstado]=useState(null)
+
+  // const estadoComponente=()=>{
+  //     setEstado(true)
+  // }
+
+  // const childCallFather=()=>{
+  //   console.log("llamando a padre desde el componente hijo")
+  // }
+
+  // const callBrother2=()=>{
+  //   setEstado(false)
+  // }
+
   return (
     // <div>
     //   <h1>Hola mundo</h1>
@@ -31,6 +62,15 @@ function App() {
     // </>
     
     <Fragment>
+      {/* <h1>{contador}</h1> */}
+      {/* <Father/> */}
+      {/* <Axios/> */}
+      {/* <Fecth/> */}
+      {/* <ComunicationComponent1 callFather={childCallFather} cambioestado={estado} callBrother={callBrother2}/>
+      <button onClick={estadoComponente} > Pulsa</button>
+      <ComunicationComponent2 item={estado}/> */}
+      {/* <FatherComponent/> */}
+      {/* <IterateKeys/> */}
       {/* <IterateArray/> */}
       {/* <SpreadOperator/> */}
       {/* <ConditionalRendering/> */}
@@ -46,6 +86,13 @@ function App() {
       {/* <Props frutas={list}/> */}
       {/* <StateComponent/> */}
       {/* <FirstComponent/> */} 
+
+      {/* <UserProvider>
+        <ListUser/>
+      </UserProvider> */}
+      <Provider store={store}>
+        <Contador/>
+      </Provider>
     </Fragment>
   );
 }
